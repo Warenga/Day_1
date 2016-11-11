@@ -10,12 +10,23 @@ class Employee():
 		self.second_name = second_name
 		self.email = email
 
-	def salary(self, hours, skill_level):
-		pay = (hours * days) * 200
-		return pay * 4
+	def salary(self):
+		self.pay = (self.hours * self.days) * 200
+		return self.pay * 4
 
 	def job_type(self):
 		pass
+
+class PartTime(Employee):
+
+	hours = 5
+	days = 4
+
+	def job_type(self):
+		return "Part time"
+
+Kelly = PartTime(5, 'Kelly', 'Howard', 'kellyh@gmail.com')
+print Kelly.salary()
 
 
 
