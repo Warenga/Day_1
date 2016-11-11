@@ -41,9 +41,13 @@ class EmployeeClassTest(unittest.TestCase):
 
     def test_raise_polymorphism_error(self):
         mark = Employee(5,'Mark', 'Kenneth', 'markk@gmail.com' )
-        self.assertEqual(mark.job_type(), 'Job type set in subclass')
+        self.assertEqual(mark.job_type(), 'Job type can only be set by SubClasses')
 
     def test_pay_encapsulation(self):
         Jill = PartTime(7, 'Jill', 'Keane', 'jakekeane@gmail.com')
         Jill.salary()
-        self.assertEqual(Jill._Employee__pay, 4000)
+        self.assertEqual(Jill._Employee__weeklyPay, 4000)
+
+    def test_abstractmethod(self):
+        Jill = PartTime(7, 'Jill', 'Keane', 'jakekeane@gmail.com')
+        self.assertEqual(Jill.job_type(), 'Part time')
