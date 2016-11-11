@@ -1,4 +1,4 @@
-from employee_class import Employee, PartTime
+from employee_class import Employee, PartTime, FullTime, Casual
 
 import unittest
 
@@ -19,5 +19,23 @@ class EmployeeClassTest(unittest.TestCase):
 
     def test_SubClass_Salary(self):
         Kelly = PartTime(4, 'Kelly', 'Howard', 'kelly@gmail.com')
-        self.assertEqual(Kelly.salary(), 16000, msg='Salary should be able to be executed through an instance of the Sub Class')   
+        self.assertEqual(Kelly.salary(), 16000, msg='Salary should be able to be executed through an instance of the Sub Class')
+
+    def test_FullTime_Sub_Class(self):
+        Jake = FullTime(7, 'Jake', 'Keane', 'jakekeane@gmail.com')
+        self.assertIsInstance(Jake, FullTime, msg='The object should be an instance of "FullTime" class ')
+
+    def test_SubClass_Salary(self):
+        Jake = FullTime(7, 'Jake', 'Keane', 'jakekeane@gmail.com')
+        self.assertEqual(Jake.salary(), 38400, msg='Salary should be able to be executed through an instance of the Sub Class')
+
+    def test_Casual_Sub_Class(self):
+        Jake = Casual(7, 'Jake', 'Keane', 'jakekeane@gmail.com')
+        self.assertIsInstance(Jake, Casual, msg='The object should be an instance of "Casual" class ')
+
+    def test_SubClass_Salary(self):
+        Jake = Casual(7, 'Jake', 'Keane', 'jakekeane@gmail.com')
+        Jake.hours = 5
+        Jake.days = 5
+        self.assertEqual(Jake.salary(), 20000, msg='Salary should be able to be executed through an instance of the Sub Class')  
 

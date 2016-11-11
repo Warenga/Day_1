@@ -25,8 +25,27 @@ class PartTime(Employee):
 	def job_type(self):
 		return "Part time"
 
-Kelly = PartTime(5, 'Kelly', 'Howard', 'kellyh@gmail.com')
-print Kelly.salary()
+class FullTime(Employee):
+
+	hours = 8
+	days = 6
+
+	def job_type(self):
+		return "Full time"
+
+class Casual(Employee):
+
+	hours = 0
+	days = 0
+
+	def job_type(Self):
+		return "Casual Employee"
+
+Jake = Casual(7, 'Jake', 'Keane', 'jakekeane@gmail.com')
+Jake.hours = 5
+Jake.days = 5
+print Jake.salary()
+print Jake.job_type()
 
 
 
