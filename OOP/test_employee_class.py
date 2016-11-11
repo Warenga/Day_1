@@ -39,3 +39,11 @@ class EmployeeClassTest(unittest.TestCase):
         Jake.days = 5
         self.assertEqual(Jake.salary(), 20000, msg='Salary should be able to be executed through an instance of the Sub Class')  
 
+    def test_raise_polymorphism_error(self):
+        mark = Employee(5,'Mark', 'Kenneth', 'markk@gmail.com' )
+        self.assertEqual(mark.job_type(), 'Job type set in subclass')
+
+    def test_pay_encapsulation(self):
+        Jill = PartTime(7, 'Jill', 'Keane', 'jakekeane@gmail.com')
+        Jill.salary()
+        self.assertEqual(Jill._Employee__pay, 4000)

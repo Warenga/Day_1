@@ -2,7 +2,7 @@ class Employee():
 
 	hours = 0
 	days = 0
-	pay = 0
+	__pay = 0 
 
 	def __init__(self, employee_id, first_name, second_name, email):
 		self.employee_id = employee_id
@@ -11,11 +11,11 @@ class Employee():
 		self.email = email
 
 	def salary(self):
-		self.pay = (self.hours * self.days) * 200
-		return self.pay * 4
+		self.__pay = (self.hours * self.days) * 200
+		return self.__pay * 4
 
 	def job_type(self):
-		pass
+		return "Job type set in subclass"
 
 class PartTime(Employee):
 
@@ -41,11 +41,9 @@ class Casual(Employee):
 	def job_type(Self):
 		return "Casual Employee"
 
-Jake = Casual(7, 'Jake', 'Keane', 'jakekeane@gmail.com')
-Jake.hours = 5
-Jake.days = 5
-print Jake.salary()
-print Jake.job_type()
+
+
+
 
 
 
