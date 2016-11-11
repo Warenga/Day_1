@@ -72,8 +72,7 @@ class Casual(Employee):
 	def job_type(Self):
 		return "Casual Employee"
 
-Jake = Employee(7, 'Jake', 'Keane', 'jakekeane@gmail.com')
-print Jake.job_type()
+
 
 
 
