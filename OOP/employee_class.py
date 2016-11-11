@@ -71,11 +71,7 @@ class Casual(Employee):
 
 	def job_type(Self):
 		return "Casual Employee"
-
-
-
-
-
+ 
 
 
 
