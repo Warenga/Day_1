@@ -7,10 +7,10 @@ This repo implements a company real-world problem by creating a Super class name
 
 ## OOP concepts included:
 1. Inheritance
-	- PartTime, FullTime and Casual inherite from Employee
+	- PartTime, FullTime and Casual inherit from Employee
 2. Polymorphism
 	- The abstract method 'job_type' is included. Only the subclasses can call 'job_type'
 3. Encapsulation
-	- The pay attribute in Employee is set to private. Can only be accessed by running object._Employee__.pay.
+	- The pay attribute in Employee is set to private. Can only be accessed by running <strong>object._Employee__.pay'</strong>.
 
 ## The repo contains various unittests that the application pass.
